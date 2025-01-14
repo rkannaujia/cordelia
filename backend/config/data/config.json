@@ -1,0 +1,17 @@
+{
+    "server":{
+        "port": 5000
+    },
+    "app":{
+        "prefix": "/api/practice-i"
+    },
+    "url" :{
+
+    },
+    "db": {
+       "user": "root",
+       "password" :"rahul",
+       "host": "localhost",
+       "mysql_db": "employee"
+    }
+}
