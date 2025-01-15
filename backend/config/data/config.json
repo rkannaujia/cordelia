@@ -3,15 +3,12 @@
         "port": 5000
     },
     "app":{
-        "prefix": "/api/practice-i"
+        "prefix": "/api/chatApp-i"
     },
     "url" :{
 
     },
-    "db": {
-       "user": "root",
-       "password" :"rahul",
-       "host": "localhost",
-       "mysql_db": "employee"
+    "IMP_KEY": {
+      "SECRET_KEY": "rahulkannaujiasoftwaredeveloper"
     }
 }

@@ -1,0 +1,16 @@
+.chat-window {
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.user-list {
+    height: 100%;
+    background-color: #fff;
+    border-right: 1px solid #ddd;
+}
+
+.typing-indicator {
+    font-style: italic;
+    color: gray;
+}
