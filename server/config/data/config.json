@@ -1,0 +1,14 @@
+{
+    "server":{
+        "port": 5000
+    },
+    "app":{
+        "prefix": "/api/chatApp-i"
+    },
+    "url" :{
+
+    },
+    "IMP_KEY": {
+      "SECRET_KEY": "rahulkannaujiasoftwaredeveloper"
+    }
+}
