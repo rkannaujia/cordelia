@@ -17,12 +17,14 @@ dotenv.config();
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
-app.use(cors({
+const corsOptions = {
   origin: 'https://cordelia-client.onrender.com',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
-}));
-app.use(express.json());
+};
+
+app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 
 // MongoDB connection
 mongoose.connect(
