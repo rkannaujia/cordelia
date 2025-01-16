@@ -92,7 +92,11 @@ const ChatDashboard = () => {
       const data = await response.json();
 
       if (data.message === "Success") {
-        navigate(`/user-chat`);
+        if(userType === "customer"){
+          navigate(`/user-chat`);
+        }else{
+          navigate(`/admin`);
+        }
       }
     } catch (error) {
       console.error("Error starting chat:", error);
