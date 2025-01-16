@@ -16,14 +16,7 @@ dotenv.config();
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server, {
-  cors: {
-    origin: "*",
-    methods: "*",
-  },
-});
-
-// Middleware
+const io = new Server(server);
 app.use(cors());
 app.use(express.json());
 
