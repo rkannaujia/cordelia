@@ -16,7 +16,13 @@ dotenv.config();
 
 const app = express();
 const server = http.createServer(app);
-const io = new Server(server);
+const io = new Server(server, {
+  cors: {
+    origin: 'https://cordelia-client.onrender.com',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true,
+  },
+});
 const corsOptions = {
   origin: 'https://cordelia-client.onrender.com',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
