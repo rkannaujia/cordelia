@@ -23,7 +23,7 @@ const AdminDashboard = () => {
 
   const fetchActiveChats = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/chat/active");
+      const response = await fetch("https://cordelia-8sms.onrender.com/api/chat/active");
       if (!response.ok) {
         throw new Error("Failed to fetch active chats");
       }
