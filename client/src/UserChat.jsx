@@ -36,7 +36,7 @@ const UserChat = () => {
   const startChat = async () => {
     try {
       setLoading(true);
-      const response = await fetch("https://cordelia-8sms.onrender.com/api/chat/start", {
+      const response = await fetch("https://cordelia-server.onrender.com/api/chat/start", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formValue),

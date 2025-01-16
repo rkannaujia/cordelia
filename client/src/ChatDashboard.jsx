@@ -51,7 +51,7 @@ const ChatDashboard = () => {
   const userType = localStorage.getItem("userType");
 
   useEffect(() => {
-    socketRef.current = io("https://cordelia-8sms.onrender.com", {
+    socketRef.current = io("https://cordelia-server.onrender.com", {
       query: { roomId },
     });
 
@@ -79,7 +79,7 @@ const ChatDashboard = () => {
     const path = window.location.pathname;
     const room = path.split("/")[2];
     try {
-      const response = await fetch("https://cordelia-8sms.onrender.com/api/chat/end", {
+      const response = await fetch("https://cordelia-server.onrender.com/api/chat/end", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ roomId: room }),
