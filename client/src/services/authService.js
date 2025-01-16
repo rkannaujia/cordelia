@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const apiUrl = "https://cordelia-8sms.onrender.com:5000";
+const apiUrl = "https://cordelia-8sms.onrender.com";
 
 const login = (email, password) => {
   return axios.post(`${apiUrl}/login`, { username: email, password });
