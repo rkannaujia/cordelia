@@ -3,6 +3,7 @@ const bcrypt = require('bcrypt');
 
 const register = async (req, res) => {
     try {
+        console.log("request====>",req)
         const { username, password, userType } = req.body;
 
         res.setHeader('Access-Control-Allow-Origin', 'https://cordelia-client.onrender.com');
