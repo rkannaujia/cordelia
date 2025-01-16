@@ -17,11 +17,11 @@ dotenv.config();
 const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
-app.use(cors(cors({
+app.use(cors({
   origin: 'https://cordelia-client.onrender.com',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
-})));
+}));
 app.use(express.json());
 
 // MongoDB connection
@@ -55,7 +55,6 @@ io.on("connection", (socket) => {
   });
 });
 
-// API Routes
 app.post("/api/chat/start", async (req, res) => {
   try {
     const { name, email, issue } = req.body;
